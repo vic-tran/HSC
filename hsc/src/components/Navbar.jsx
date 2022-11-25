@@ -6,8 +6,9 @@ import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import logo from "../assets/logo.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
 
+
 const Container = styled.div`
-    height: 60px;
+    height: 150px;
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -76,18 +77,22 @@ const Navbar = () => {
             </Left>
             <Center>
                 <Logo>
+                    <a href='/'>
                     <img
                         src={logo}
-                        height={150}
+                        height={140}
                         width={170} 
                         alt='logo'
                     />
+                    </a>
                 </Logo>
                     
             </Center>
             <Right>
                 <MenuItem>
+                    <a href="https://www.instagram.com/hermanos.surfco/">
                     <InstagramIcon />
+                    </a>
                 </MenuItem>
                 <MenuItem>About</MenuItem>
                 <MenuItem>Contact</MenuItem>
