@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import logo from "../assets/logo.png";
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Container = styled.div`
     height: 60px;
@@ -20,7 +21,7 @@ const Left = styled.div`
     align-items: center;
 `
 const Language = styled.span`
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
 `;
 
@@ -35,6 +36,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;    
 `;
+
 
 const Logo = styled.image`
     flex: 1;
@@ -56,7 +58,7 @@ const Right = styled.div`
     justify-content: flex-end;
 `;
 const MenuItem = styled.div`
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
     margin-left: 25px;
 `;
@@ -76,12 +78,19 @@ const Navbar = () => {
                 <Logo>
                     <img
                         src={logo}
-                        height={150} 
+                        height={150}
+                        width={170} 
                         alt='logo'
                     />
                 </Logo>
+                    
             </Center>
             <Right>
+                <MenuItem>
+                    <InstagramIcon />
+                </MenuItem>
+                <MenuItem>About</MenuItem>
+                <MenuItem>Contact</MenuItem>
                 <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>
                 <MenuItem>
