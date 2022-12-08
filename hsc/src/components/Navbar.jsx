@@ -20,6 +20,7 @@ const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+    margin-left: -10px;
 `
 const Language = styled.span`
     font-size: 20px;
@@ -50,7 +51,7 @@ const Center = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    margin-left: 280px;
 `;
 const Right = styled.div`
     flex: 1;
@@ -62,6 +63,7 @@ const MenuItem = styled.div`
     font-size: 20px;
     cursor: pointer;
     margin-left: 25px;
+    margin-right: 15px;
 `;
 
 const Navbar = () => {
