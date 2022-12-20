@@ -1,119 +1,64 @@
-import React from 'react'
-import styled from 'styled-components';
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import pic1 from '../assets/pic1.png';
-import { useState } from 'react';
-import { sliderItems } from "../data";
+import React, {useState} from 'react'
+import './Slider.css'
+import BtnSlider from './BtnSlider'
+import dataSlider from './dataSlider'
 
+export default function Slider() {
 
+    const [slideIndex, setSlideIndex] = useState(1)
 
-const Container = styled.div`
-    padding-top: 15px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-`;
+    const nextSlide = () => {
+        if(slideIndex !== dataSlider.length){
+            setSlideIndex(slideIndex + 1)
+        } 
+        else if (slideIndex === dataSlider.length){
+            setSlideIndex(1)
+        }
+    }
 
-const Arrow = styled.div`
-    width: 50px;
-    height: 50px;
-    background-color: #fff7f7;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: ${props => props.direction === "left" && "10px"};
-    right: ${props => props.direction === "right" && "10px"};
-    margin: auto;
-    opacity: 0.5;
-    z-index: 2;
-`;
+    const prevSlide = () => {
+        if(slideIndex !== 1){
+            setSlideIndex(slideIndex - 1)
+        }
+        else if (slideIndex === 1){
+            setSlideIndex(dataSlider.length)
+        }
+    }
 
-const Wrapper = styled.div`
-    height: 100%;
-    display: flex;
-`;
+    const moveDot = index => {
+        setSlideIndex(index)
+    }
 
-const Slide = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-`;
+    return (
+        <div className="container-slider">
+            {dataSlider.map((obj, index) => {
+                return (
+                    <div
+                    key={obj.id}
+                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    >
+                        <img 
+                        src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`} 
+                        alt = ""
+                        />
+                        <title className="title">
+                           {obj.title}
+                        </title>
+                    </div>
+                )
+            })}
 
-const ImgContainer = styled.div`
-    height: 100%;
-    width: 100vw;
-    flex: 1;
-`;
+            <BtnSlider moveSlide={nextSlide} direction={"next"} />
+            <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
 
-const Image = styled.img`
-    height: 70%;
-`;
-
-const InfoContainer = styled.div`
-    flex: 1;
-    padding: 200px 190px;
-    position: relative;
-`;
-
-const Title = styled.h1`
-    font-size: 70px;
-    color: black;
-    display: flex;
-`;
-
-const Description = styled.p`
-    margin: 100px 100px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 3px;
-`;
-
-const Button = styled.button`
-    padding: 10px 20px;
-    font-size: 25px;
-    color: lightgray;
-    background-color: transparent;
-    cursor: pointer;
-`;
-
-const Slider = () => {
-    const [ slideIndex, setSlideIndex ] = useState(0);
-    const handleClick = (direction) => {
-
-    };
-
-  return (
-    <Container>
-        <Arrow direction="left" onClick={()=>handleClick("left")}>
-            <ArrowLeftIcon />
-        </Arrow>
-        <Wrapper>
-            {sliderItems.map((item) => (
-                <Slide>
-                    <ImgContainer>
-                        <Image src={item.img} />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title>{item.title}</Title>
-                        <Description>{item.desc}</Description>
-                    </InfoContainer>
-                </Slide>
-            ))}
-        </Wrapper>
-        <Arrow direction="right"  onClick={()=>handleClick("right")}>
-            <ArrowRightIcon />
-        </Arrow>
-    </Container>
-  )
+            <div className="container-dots">
+                {Array.from({length: 5}).map((item, index) => (
+                    <div 
+                    onClick={() => moveDot(index + 1)}
+                    className={slideIndex === index + 1 ? "dot active" : "dot"}
+                    ></div>
+                ))}
+            </div>
+        </div>
+    )
 }
-
-export default Slider
