@@ -98,8 +98,8 @@ const Navbar = () => {
                 </MenuItem>
                 <MenuItem>About</MenuItem>
                 <MenuItem>Contact</MenuItem>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem>Returns</MenuItem>
+                <MenuItem></MenuItem>
                 <MenuItem>
                     <Badge badgeContent={4} color="primary">
                     <ShoppingCartTwoToneIcon/>

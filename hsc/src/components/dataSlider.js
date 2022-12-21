@@ -8,22 +8,22 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
-    title: "Lorem ipsum",
+    title: "Based in Santa Cruz, CA",
     subTitle: "Lorem"
   },
   {
     id: uuidv4(),
-    title: "Lorem ipsum",
+    title: "",
     subTitle: "Lorem"
   },
   {
     id: uuidv4(),
-    title: "Lorem ipsum",
+    title: "",
     subTitle: "Lorem"
   },
   {
     id: uuidv4(),
-    title: "Shop the Brotherhood Collection",
+    title: "",
     subTitle: "Lorem"
   },
 ];
