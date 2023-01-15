@@ -13,9 +13,28 @@ const Image = styled.img`
 `;
 const Info = styled.div`
     position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
-const Title = styled.h1``
-const Button = styled.button``
+const Title = styled.h1`
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+`
+const Button = styled.button`
+    border: none;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+`
 
 const CategoryItem = ({item}) => {
   return (
