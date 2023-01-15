@@ -10,6 +10,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 1;
 `;
 const Info = styled.div`
     position: absolute;
@@ -21,6 +22,7 @@ const Info = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -35px;
 `
 const Title = styled.h1`
     color: white;
