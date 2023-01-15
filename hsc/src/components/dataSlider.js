@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
 
-const dataSlider = [
+ const dataSlider = [
   {
     id: uuidv4(),
-    title: "Shop the Brotherhood Collection",
+    title: "The Brotherhood Collection",
     subTitle: "Lorem"
   },
   {
@@ -13,7 +13,7 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
-    title: "",
+    title: "Made in El Salvador",
     subTitle: "Lorem"
   },
   {
@@ -29,3 +29,5 @@ const dataSlider = [
 ];
 
 export default dataSlider;
+
+
