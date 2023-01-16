@@ -68,10 +68,10 @@ const Newsletter = () => {
     <Container>
         <Image src={news}/>
         <Info>
-            <Title>DON't MISS OUT</Title>
+            <Title>DON't MISS OUT.</Title>
             <Desc>Get updates on new collections, sales, and more.</Desc>
             <InputContainer>
-                <Input placeholder="Your email" />
+                <Input placeholder="Email" />
                 <Button>
                     <SendIcon />
                 </Button>
