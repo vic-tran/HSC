@@ -3,6 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import RoomIcon from '@mui/icons-material/Room';
 import PhoneIcon from '@mui/icons-material/Phone';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import styled from "styled-components";
 import logo from "../assets/logo.png";
@@ -23,13 +24,9 @@ const Left = styled.div`
 const Image = styled.img`
   height: 150px;
   width: 150px;
+  margin-left: 40px;
 `;
 
-const Logo = styled.h1``;
-
-const Desc = styled.p`
-  margin: 20px 0px;
-`;
 
 const SocialContainer = styled.div`
   display: flex;
@@ -39,7 +36,7 @@ const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: white;
+  color: black;
   background-color: #${(props) => props.color};
   display: flex;
   align-items: center;
@@ -96,17 +93,25 @@ const Footer = () => {
         <Image src={logo} />
         </a>
         <SocialContainer>
+        <SocialIcon color="black">
+            <CopyrightIcon />
+          </SocialIcon>
           <SocialIcon color="black">
             <a href="https://www.instagram.com/hermanos.surfco/">
             <InstagramIcon />
             </a>
           </SocialIcon>
           <SocialIcon color="black">
+            <a href="">
             <FacebookIcon />
+            </a>
           </SocialIcon>
           <SocialIcon color="black">
+            <a href="">
             <TwitterIcon />
+            </a>
           </SocialIcon>
+          
         </SocialContainer>
       </Left>
       <Center>
