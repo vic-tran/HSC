@@ -5,10 +5,11 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import logo from "../assets/logo.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import {mobile} from "../responsive.js";
 
 const Container = styled.div`
     height: 150px;
+    ${mobile({backgroundColor:"red"})}
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
