@@ -44,6 +44,7 @@ const Logo = styled.image`
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
 `;
 
@@ -99,7 +100,8 @@ const Navbar = () => {
                 <MenuItem>About</MenuItem>
                 <MenuItem>Contact</MenuItem>
                 <MenuItem>Returns</MenuItem>
-                <MenuItem></MenuItem>
+                <MenuItem>Register</MenuItem>
+                <MenuItem>Login</MenuItem>
                 <MenuItem>
                     <Badge badgeContent={4} color="primary">
                     <ShoppingCartTwoToneIcon/>

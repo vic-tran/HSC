@@ -119,8 +119,8 @@ const Button = styled.button`
 const Product = () => {
   return (
     <Container>
-        <Navbar/>
         <Announcements />
+        <Navbar/>
         <Wrapper>
             <ImgContainer>
             <Image src="https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg"/>
