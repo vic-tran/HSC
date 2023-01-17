@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
     font-weight: 300;
     text-align: center;
+    margin-right: 90px;
 `;
 
 const Top = styled.div`
@@ -34,12 +35,12 @@ const TopButton = styled.button`
     color: ${props => props.type === "filled" && "white"};
 `;
 
-const TopTexts =styled.div`
-
+const TopTexts = styled.div`
+    margin-right: 150px;
 `;
 
 
-const TopText =styled.span`
+const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
     margin: 10px 20px;
