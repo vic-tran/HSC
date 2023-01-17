@@ -56,7 +56,7 @@ const Button = styled.button`
     cursor: pointer;
     margin-bottom: 70px;
     background-color: #FDA769;
-    font-color: white;
+    color: white;
 `;
 
 
