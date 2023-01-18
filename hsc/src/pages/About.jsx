@@ -36,8 +36,8 @@ const Desc = styled.p`
     align-items: center;
     justify-content: center;
     margin-bottom: 90px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 250px;
+    margin-right: 250px;
     letter-spacing: 2px;
     line-height: 1.5;
 `;
@@ -51,7 +51,7 @@ const About = () => {
         <Image src={about}/>
         </Wrapper>
         <Title>It all begins with an idea.</Title>
-        <Desc>Hermanos Surf is a brand that represents creative freedom, a forward-thinking philosophy, and a generation of creators and innovators. We embrace the modern do-it-yourself attitude within surf culture, performance surfing, and craftsmanship. We constantly strive to minimize our environmental impact and protect the oceans and waves that raised us. This is a surf-everything and ride-anything mentality..</Desc>
+        <Desc>What is Hermanos Surf Co? We are a brand created for the purpose of sharing our lifestyle, a lifestyle of surfing and helping others while having fun in and out of the water. We embrace the modern do-it-yourself attitude within surf culture, performance surfing, and craftsmanship. We constantly strive to minimize our environmental impact and protect the oceans and waves that raised us. This is a surf-everything and ride-anything mentality..</Desc>
         <Footer/>
     </Container>
   )
