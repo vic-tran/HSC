@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Announcements from "../components/Announcements";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { mobile } from "../responsive";
 
 const Container = styled.div`   
  
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 50px;
+    ${mobile({width: "75%"})}
 `;
 
 const Form = styled.form`

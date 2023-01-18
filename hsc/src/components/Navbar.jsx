@@ -9,13 +9,14 @@ import {mobile} from "../responsive.js";
 
 const Container = styled.div`
     height: 150px;
-    ${mobile({backgroundColor:"red"})}
+    ${mobile({height: "50px"})};
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({padding: "10px 0px"})};
 `;
 const Left = styled.div`
     flex: 1;
@@ -26,6 +27,7 @@ const Left = styled.div`
 const Language = styled.span`
     font-size: 20px;
     cursor: pointer;
+    ${mobile({display: "none"})}
 `;
 
 const SearchContainer = styled.div`
@@ -37,7 +39,8 @@ const SearchContainer = styled.div`
 `;
 
 const Input = styled.input`
-    border: none;    
+    border: none; 
+    ${mobile({width: "50px"})}   
 `;
 
 
@@ -47,6 +50,7 @@ const Logo = styled.image`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    ${mobile({fontSize: "24px"})}
 `;
 
 const Center = styled.div`
@@ -60,12 +64,14 @@ const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    ${mobile({flex:2,justifyContent: "center"})}
 `;
 const MenuItem = styled.div`
     font-size: 20px;
     cursor: pointer;
     margin-left: 25px;
     margin-right: 15px;
+    ${mobile({fontSize: "12px", marginLeft:"10px"})}
 `;
 
 const Navbar = () => {

@@ -1,6 +1,7 @@
 import SendIcon from '@mui/icons-material/Send';
 import news from "../assets/news.png";
 import  styled  from "styled-components";
+import { mobile } from '../responsive';
 
 
 const Container = styled.div`
@@ -40,6 +41,7 @@ const Desc = styled.div`
     font-size: 24px;
     font-weight: 300;
     color: white;
+    ${mobile({textAlign: "center"})}
 `
 
 const InputContainer = styled.div`
@@ -48,6 +50,7 @@ const InputContainer = styled.div`
     background-color: white;
     display: flex;
     justify-content: space-between;
+    ${mobile({width: "80%"})}
 `
 
 const Input = styled.input`
@@ -68,7 +71,7 @@ const Newsletter = () => {
     <Container>
         <Image src={news}/>
         <Info>
-            <Title>DON't MISS OUT.</Title>
+            <Title>DON'T MISS OUT.</Title>
             <Desc>Get updates on new collections, sales, and more.</Desc>
             <InputContainer>
                 <Input placeholder="Email" />
