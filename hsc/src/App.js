@@ -9,7 +9,8 @@ import Returns from "./pages/Returns";
 
 const App = () => {
   return (
-  <Returns />
+  <Home/>
+  
   )
 };
 

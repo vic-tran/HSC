@@ -50,6 +50,7 @@ const Logo = styled.image`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-right: 90px;
     ${mobile({fontSize: "24px"})}
 `;
 
@@ -104,9 +105,16 @@ const Navbar = () => {
                     <InstagramIcon />
                     </a>
                 </MenuItem>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Contact</MenuItem>
-                <MenuItem>Returns</MenuItem>
+                <MenuItem>
+                    <a href="/about">
+                    About
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="/Returns">
+                    Returns
+                    </a>
+                </MenuItem>
                 <MenuItem>Register</MenuItem>
                 <MenuItem>Login</MenuItem>
                 <MenuItem>
