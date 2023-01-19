@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Form = styled.form`
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,11 +40,12 @@ const Title = styled.div`
 
 const Input = styled.input`
     flex: 1;
-    min-width: 30%;
+    min-height: 4%;
+    min-width: 40%;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
-    border: 3px solid gray;
+    border: 2px solid gray;
 `;
 
 const Agreement = styled.span`

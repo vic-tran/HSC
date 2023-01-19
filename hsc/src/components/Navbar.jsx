@@ -55,7 +55,7 @@ const Logo = styled.image`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-right: 90px;
+    margin-right: 180px;
     ${mobile({fontSize: "24px"})}
 `;
 
@@ -111,17 +111,25 @@ const Navbar = () => {
                     </a>
                 </MenuItem>
                 <MenuItem>
-                  
+                  <Link to ="/about">
                     About
-                   
+                    </Link>
                 </MenuItem>
                 <MenuItem>
                     <a href="/Returns">
                     Returns
                     </a>
                 </MenuItem>
-                <MenuItem>Register</MenuItem>
-                <MenuItem>Login</MenuItem>
+                <MenuItem>
+                    <Link to = "/Register">
+                    Register
+                    </Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link to = "/Login">
+                    Login
+                    </Link>
+                </MenuItem>
                 <MenuItem>
                     <Badge badgeContent={4} color="primary">
                     <ShoppingCartTwoToneIcon/>
