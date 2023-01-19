@@ -6,6 +6,11 @@ import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import logo from "../assets/logo.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import {mobile} from "../responsive.js";
+import { Link } from "react-router-dom";
+import About from '../pages/About';
+import Returns from "../pages/Returns";
+
+
 
 const Container = styled.div`
     height: 150px;
@@ -106,9 +111,9 @@ const Navbar = () => {
                     </a>
                 </MenuItem>
                 <MenuItem>
-                    <a href="/about">
+                  
                     About
-                    </a>
+                   
                 </MenuItem>
                 <MenuItem>
                     <a href="/Returns">
