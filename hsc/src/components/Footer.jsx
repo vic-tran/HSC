@@ -8,6 +8,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { mobile } from '../responsive';
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -119,7 +120,11 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
+          <ListItem>
+            <Link to = "/">
+            Home
+            </Link>
+          </ListItem>
           <ListItem>Cart</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
