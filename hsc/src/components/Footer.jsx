@@ -7,14 +7,13 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import styled from "styled-components";
 import logo from "../assets/logo.png";
-import { mobile } from '../responsive';
 import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
   display: flex;
   background-color: #DFD3C3;
-  ${mobile({flexDirection: "column"})}
+  flex-wrap: wrap;
 `;
 
 const Left = styled.div`
@@ -51,7 +50,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({display: "none"})}
+
 `;
 
 const Title = styled.h3`
@@ -65,12 +64,17 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 10;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
   cursor: pointer;
+  
 `;
 
 const Right = styled.div`
@@ -128,7 +132,6 @@ const Footer = () => {
           <ListItem>Cart</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
         </List>

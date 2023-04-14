@@ -14,6 +14,11 @@ const Title = styled.h1`
     align-items: center;
     justify-content: center;
     margin: 50px;
+    @media (max-width: 768px) {
+        /* Update the breakpoint as per your design */
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 `;
 
 const Desc = styled.p`
@@ -25,6 +30,11 @@ const Desc = styled.p`
     margin-right: 450px;
     letter-spacing: 2px;
     line-height: 1.5;
+    @media (max-width: 1280px) {
+        /* Update the breakpoint as per your design */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `;
 
 const Returns = () => {

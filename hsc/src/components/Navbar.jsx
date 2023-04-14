@@ -5,7 +5,6 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import logo from "../assets/logo.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {mobile} from "../responsive.js";
 import { Link } from "react-router-dom";
 import About from '../pages/About';
 import Returns from "../pages/Returns";
@@ -14,25 +13,57 @@ import Returns from "../pages/Returns";
 
 const Container = styled.div`
     height: 150px;
-    ${mobile({height: "50px"})};
+  
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    ${mobile({padding: "10px 0px"})};
+
+    @media (max-width: 1280px) {
+        flex-direction: column;
+        align-items: center;
+    }
+   
 `;
 const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
     margin-left: -10px;
-`
+  
+`;
+
+const Right = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    @media (max-width: 768px) {
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+`;
+
+const Center = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 280px;
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
+`;
+
 const Language = styled.span`
     font-size: 20px;
     cursor: pointer;
-    ${mobile({display: "none"})}
+
+    @media (max-width: 768px) {
+        margin-bottom: 10px;
+    }
 `;
 
 const SearchContainer = styled.div`
@@ -41,13 +72,13 @@ const SearchContainer = styled.div`
     align-items: center;
     margin-left: 25px;
     padding: 5px;
+   
 `;
 
 const Input = styled.input`
     border: none; 
-    ${mobile({width: "50px"})}   
-`;
 
+`;
 
 const Logo = styled.image`
     flex: 1;
@@ -56,28 +87,23 @@ const Logo = styled.image`
     justify-content: center;
     cursor: pointer;
     margin-right: 180px;
-    ${mobile({fontSize: "24px"})}
+
+    @media (max-width: 768px) {
+        margin-right: 0;
+    }
 `;
 
-const Center = styled.div`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin-left: 280px;
-`;
-const Right = styled.div`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    ${mobile({flex:2,justifyContent: "center"})}
-`;
 const MenuItem = styled.div`
     font-size: 20px;
     cursor: pointer;
     margin-left: 25px;
     margin-right: 15px;
-    ${mobile({fontSize: "12px", marginLeft:"10px"})}
+
+    @media (max-width: 768px) {
+        margin: 0;
+        margin-right: 10px;
+    }
+   
 `;
 
 const Navbar = () => {
@@ -88,27 +114,27 @@ const Navbar = () => {
                 <Language>ENG</Language>
                 <SearchContainer>
                     <Input placeholder="Search"/>
-                    <SearchIcon style={{color:"gray", fontSize:16}}/>
+                    <SearchIcon style={{color:"gray", fontSize: 16}}/>
                 </SearchContainer>
             </Left>
             <Center>
                 <Logo>
-                    <a href='/'>
+                    <Link to='/'>
                     <img
                         src={logo}
                         height={140}
                         width={170} 
                         alt='logo'
                     />
-                    </a>
+                    </Link>
                 </Logo>
                     
             </Center>
             <Right>
                 <MenuItem>
-                    <a href="https://www.instagram.com/hermanos.surfco/">
+                    <Link to="https://www.instagram.com/hermanos.surfco/">
                     <InstagramIcon />
-                    </a>
+                    </Link>
                 </MenuItem>
                 <MenuItem>
                   <Link to ="/about">
@@ -116,9 +142,9 @@ const Navbar = () => {
                     </Link>
                 </MenuItem>
                 <MenuItem>
-                    <a href="/Returns">
+                    <Link to="/Returns">
                     Returns
-                    </a>
+                    </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to = "/Register">
@@ -141,4 +167,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

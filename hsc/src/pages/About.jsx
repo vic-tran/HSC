@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Announcements from "../components/Announcements";
 import Navbar from "../components/Navbar";
 import about from "../assets/about.png";
-import Slider from "../components/Slider";
 import Footer from "../components/Footer";
 
 const Container = styled.div`
@@ -12,13 +11,26 @@ const Container = styled.div`
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 100px; /* Add margin top to push the image down */
+    @media (max-width: 1280px) { /* Update the breakpoint as per your design */
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
 `;
 
 const Image = styled.img`
     border: 4px solid black;
-    height: 60vh;
-    width: 100vh;
-    margin: 20px;
+    height: auto;
+    margin: 10;
+    max-width: 100%;
+    @media (max-width: 1280px) {
+        /* Update the breakpoint as per your design */
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 `;
 
 const Title = styled.h1`
@@ -40,6 +52,10 @@ const Desc = styled.p`
     margin-right: 250px;
     letter-spacing: 2px;
     line-height: 1.5;
+    @media (max-width: 1280px) { /* Update the breakpoint as per your design */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `;
 
 const About = () => {
@@ -57,4 +73,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
